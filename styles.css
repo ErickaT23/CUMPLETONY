@@ -4377,7 +4377,8 @@ body {
 
 #wishes-section .btn-wish-toggle,
 #wishes-section .btn-wish-submit,
-#rsvp-section .btn-rsvp {
+#rsvp-section .btn-rsvp,
+#wishes-section .btn-rsvp {
     border: 1px solid #6b7228 !important;
     border-radius: 999px;
     background: #6b7228 !important;
