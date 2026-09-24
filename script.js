@@ -14,6 +14,9 @@ async function waitForRSVPDatabase(timeoutMs = 2400) {
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
+    document.querySelectorAll('lord-icon').forEach(function(icon) {
+        icon.setAttribute('colors', 'primary:#B7C85A,secondary:#F5EDD6');
+    });
     initLangToggle();
     await waitForRSVPDatabase();
     await hydrateSiteConfigForEvent();
@@ -1198,7 +1201,7 @@ const translations = {
     countdown_min: "Min",
     countdown_seg: "Seg",
     btn_calendar: "Agregar al calendario",
-    nuevo_texto: "Hoy celebramos 27 años de sueños, alegría y momentos inolvidables. Que este nuevo capítulo llegue lleno de experiencias bonitas, personas especiales y motivos para sonreír.",
+    nuevo_texto: "¡Tony cumple 27! Vamos a celebrarlo con buena vibra, risas, música y todos los que hacen la vida más divertida.",
     nuevo_titulo: "¡Brindemos por Tony!",
     itinerary_title: "Itinerario",
     itinerary_item_1: "Cócteles de bienvenida",
@@ -1211,6 +1214,7 @@ const translations = {
     evento1_titulo: "Bendición del Negocio",
     evento1_lugar: "Tony's Home",
     evento2_titulo: "Celebración",
+    event_note: "Por favor, estaciona al borde de la calle frente a la casa. Si se llena, estaciona en la casa club y llama a Tony al 646 462 0346 para que pase por ti.",
     recepcion_titulo: "Recepción",
     btn_location: "Ver ubicación",
     dresscode_title: "Código de vestimenta",
@@ -1222,8 +1226,8 @@ const translations = {
     trayectoria_title: "Momentos que brillan",
     trayectoria_text: "Un recorrido por los momentos más especiales de estos 27 años.",
     album_title: "Álbum Digital",
-    album_text: "Revive cada momento especial. Accede al álbum de fotos de este gran día.",
-    btn_album: "Ver álbum",
+    album_text: "Revive cada momento especial, sube tus fotos y comparte los recuerdos de este gran día.",
+    btn_album: "Subir fotos",
     album_qr_label: "Escanea para abrir",
     playlist_title: "Playlist",
     playlist_text: "Ayúdame a crear la playlist perfecta para esta noche. Agrega esa canción que no puede faltar.",
@@ -1276,7 +1280,7 @@ const translations = {
     countdown_min: "Min",
     countdown_seg: "Sec",
     btn_calendar: "Add to calendar",
-    nuevo_texto: "Today we celebrate 27 years of dreams, joy, and unforgettable moments. May this new chapter be filled with beautiful experiences, special people, and countless reasons to smile.",
+    nuevo_texto: "Tony is turning 27! Let's celebrate with good vibes, laughter, music, and everyone who makes life more fun.",
     nuevo_titulo: "Let's raise a glass to Tony!",
     nuevo_titulo: "Let's celebrate together!",
     itinerary_title: "Schedule",
@@ -1290,6 +1294,7 @@ const translations = {
     evento1_titulo: "Business Blessing",
     evento1_lugar: "Tony's Home",
     evento2_titulo: "Celebration",
+    event_note: "Please park along the curb in front of the house. If it fills up, park at the clubhouse and call Tony at 646 462 0346 for a pickup.",
     recepcion_titulo: "Reception",
     btn_location: "View location",
     dresscode_title: "Dress Code",
@@ -1301,8 +1306,8 @@ const translations = {
     trayectoria_title: "Moments That Shine",
     trayectoria_text: "A look back at the most special moments of these 27 years.",
     album_title: "Digital Album",
-    album_text: "Relive every special moment. Access the photo album from this big day.",
-    btn_album: "View album",
+    album_text: "Relive every special moment, upload your photos, and share the memories from this special day.",
+    btn_album: "Upload photos",
     album_qr_label: "Scan to open",
     playlist_title: "Playlist",
     playlist_text: "Help set the tone for the evening. Add the song that belongs on tonight's soundtrack — the one that can't be left out.",

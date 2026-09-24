@@ -554,7 +554,6 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 
 #names > * {
     position: relative;
-    z-index: 1;
 }
 
 .names-grid {
@@ -2479,7 +2478,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    color: var(--white);
+    color: #6b7228;
     border: 1px solid rgba(255, 255, 255, 0.4);
     transition: transform .2s ease, background-color .2s ease;
 }
@@ -3903,8 +3902,50 @@ body {
     border-color: #6b7228 !important;
 }
 
-#names .invitado-tarjeta::before {
-    border-color: rgba(107, 114, 40, 0.75) !important;
+.invitado-decoracion-img {
+    display: block;
+    width: 87px;
+    height: auto;
+    margin: 0 auto -38px;
+    position: relative;
+    z-index: 3;
+    top: 130px;
+    left: 144px;
+}
+
+.bendiciones-fh-img {
+    position: absolute;
+    z-index: 10;
+    top: 149px;
+    left: 50%;
+    right: auto;
+    width: 106px;
+    height: auto;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+#bendiciones .bendiciones-tarjeta {
+    overflow: visible !important;
+}
+
+#names .names-text {
+    margin: 18px auto 28px;
+}
+
+#names .invitado-tarjeta {
+    margin-top: 0;
+    top: -20px;
+}
+
+#names > * {
+    position: relative;
+}
+
+#names,
+#names * {
+    animation: none !important;
+    transform: none !important;
 }
 
 /* Olive accents for Tony's celebration palette. */
@@ -3921,7 +3962,6 @@ body {
     border-left-color: #6b7228 !important;
 }
 
-#countdown .countdown-number,
 #countdown .countdown-separator,
 #agenda .itinerary-title,
 #agenda .itinerary-inicial,
@@ -4065,6 +4105,15 @@ body {
     color: #F5EDD6;
 }
 
+.section p.event-note {
+    margin: 8px auto 0;
+    max-width: 42rem;
+    color: #F5EDD6 !important;
+    font-family: var(--text) !important;
+    font-size: 11px !important;
+    line-height: 1.45;
+}
+
 .section p,
 .section label,
 .section a,
@@ -4102,6 +4151,10 @@ body {
     text-shadow: none;
 }
 
+#names .invitado-lugares {
+    font-style: normal !important;
+}
+
 #countdown .countdown-number,
 #countdown .countdown-separator,
 #agenda .itinerary-title,
@@ -4123,6 +4176,14 @@ body {
 
 .countdown-section .countdown-number {
     font-size: 20px !important;
+}
+
+#countdown .countdown-number {
+    border: 0 !important;
+    background: rgba(10, 10, 10, 0.72) !important;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.42), 0 5px 10px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 #hours {
@@ -4200,6 +4261,13 @@ body {
     font-size: 30px !important;
 }
 
+.itinerary-icon lord-icon,
+.wishes-icon lord-icon {
+    display: block;
+    width: 75px;
+    height: 75px;
+}
+
 #bendiciones .bendiciones-fondo {
     background: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 55%)), url("images/FP.png") center / cover no-repeat !important;
     filter: blur(1px);
@@ -4275,6 +4343,46 @@ body {
     vertical-align: baseline;
 }
 
+#dresscode .dresscode-inner::before {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+}
+
+.dresscode-fv-img {
+    display: block;
+    position: absolute;
+    width: 160px;
+    left: -58px;
+    top: -50px;
+    height: auto;
+    z-index: 3;
+}
+
+#dresscode .dresscode-icon {
+    margin-top: -150px;
+}
+
+#dresscode .dresscode-inner {
+    position: relative;
+    overflow: visible !important;
+}
+
+.invitado-tarjeta::before,
+.bendiciones-tarjeta::before,
+#events .event-card::before,
+#agenda .agenda-panel::before,
+#playlist .playlist-media-wrap::before,
+#album .album-inner::before,
+#wishes-section .wishes-inner::before,
+#rsvp-section .rsvp-panel::before,
+#wishes-section .rsvp-panel::before,
+#frase-final .frase-card::before {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+}
+
 #album .album-title,
 #album .playlist-title {
     margin: 10px 0 14px !important;
@@ -4333,6 +4441,26 @@ body {
 
 #wishes-section .rsvp-inner {
     margin-top: 34px;
+}
+
+#wishes-section {
+    position: relative;
+    overflow: visible !important;
+}
+
+.wishes-rsvp-fv-img {
+    position: absolute;
+    z-index: 10;
+    top: 41%;
+    left: 17%;
+    width: 140px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#wishes-section .rsvp-panel {
+    border-color: #6b7228 !important;
 }
 
 #wishes-section {
@@ -4505,19 +4633,19 @@ body {
 #rsvp-name,
 #guest-count {
     background: rgba(10, 10, 10, 0.72) !important;
-    border-color: rgba(201, 168, 76, 0.54) !important;
+    border-color: rgba(107, 114, 40, 0.8) !important;
     color: #F5EDD6 !important;
     font-family: var(--sans) !important;
 }
 
 .rsvp-radio-option {
-    border-color: rgba(201, 168, 76, 0.46) !important;
+    border-color: rgba(107, 114, 40, 0.8) !important;
     background: rgba(10, 10, 10, 0.5) !important;
 }
 
 .footer,
 .footer a {
-    color: #C9A84C !important;
+    color: #6b7228 !important;
 }
 
 .music-fab-btn,

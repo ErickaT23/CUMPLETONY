@@ -2,26 +2,26 @@
     --bg: #000000;
     --paper: #000000;
     --paper-strong: #000000;
-    --rose: #C9A84C;
-    --rose-dark: #0a0a0a;
-    --rose-deep: #0D2840;
-    --beige: #D4E4F0;
-    --gold-1: #EEF4F8;
-    --gold-2: #8BAFC8;
-    --gold-3: #4A7A9B;
+    --rose: #B7C85A;
+    --rose-dark: #252b0d;
+    --rose-deep: #141804;
+    --beige: #F5EDD6;
+    --gold-1: #F5EDD6;
+    --gold-2: #D8C98A;
+    --gold-3: #C9A84C;
     --ink: #FFFFFF;
     --ink-soft: #FFFFFF;
-    --line: rgba(13, 40, 64, 0.18);
-    --line-soft: rgba(13, 40, 64, 0.1);
+    --line: rgba(183, 200, 90, 0.42);
+    --line-soft: rgba(183, 200, 90, 0.18);
     --shadow-card: 0 18px 42px rgba(0, 0, 0, 0.38);
     --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.28);
     --radius-lg: 24px;
     --radius-md: 18px;
     --radius-sm: 14px;
 
-    --font-title: "Montserrat", sans-serif;
-    --font-subtitle: "Montserrat", sans-serif;
-    --font-body: "Cormorant Garant", serif;
+    --font-title: "Cormorant Garamond", serif;
+    --font-subtitle: "Outfit", sans-serif;
+    --font-body: "Outfit", sans-serif;
 }
 
 * {
@@ -107,8 +107,16 @@ body {
     font-size: clamp(3.1rem, 7.5vw, 5rem);
     font-weight: 400;
     line-height: 0.9;
-    color: #FFFFFF;
-    -webkit-text-fill-color: #FFFFFF;
+    color: var(--gold-3);
+    -webkit-text-fill-color: var(--gold-3);
+}
+
+.dashboard-header {
+    border-color: var(--rose) !important;
+}
+
+.dashboard-header::after {
+    background: linear-gradient(90deg, var(--rose), rgba(183, 200, 90, 0)) !important;
 }
 
 .dashboard-subtitle {
