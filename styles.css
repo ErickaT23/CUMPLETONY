@@ -442,7 +442,7 @@ a {
 .hero-invitado-fondo {
     position: absolute;
     inset: 0;
-    background: url("images/F3.jpeg") 62% center/cover no-repeat;
+    background: url("images/FINI.jpeg") 62% center/cover no-repeat;
     transform: scale(1.012);
     transform-origin: center;
 }
@@ -738,7 +738,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 .countdown-section .countdown-fondo {
-    background-image: url("images/H5.jpeg");
+    background-image: url("images/FCON.jpeg");
     background-position: 82% center;
 }
 
@@ -842,7 +842,7 @@ html.js-anim .names-editorial.fade-in-element.is-visible {
 }
 
 #countdown .countdown-fondo {
-    background-image: url("images/F4.jpeg");
+    background-image: url("images/FCON.jpeg");
 }
 
 #agenda {
@@ -4310,6 +4310,14 @@ body {
     text-transform: uppercase;
 }
 
+#events .event-card:nth-child(2) .event-photo-icon {
+    display: none !important;
+}
+
+#events .event-card:nth-child(2) .event-icon {
+    display: none !important;
+}
+
 #dresscode .dresscode-fondo {
     background-image: url("images/FT3.png") !important;
     background-size: cover !important;
@@ -4451,7 +4459,7 @@ body {
 .wishes-rsvp-fv-img {
     position: absolute;
     z-index: 10;
-    top: 41%;
+    top: 34%;
     left: 17%;
     width: 140px;
     height: auto;

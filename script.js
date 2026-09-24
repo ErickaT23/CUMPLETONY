@@ -38,7 +38,7 @@ const externalConfig = window.config || {};
 function resolveEventId() {
     const eventConfig = externalConfig.event || {};
     const eventIdParam = String(eventConfig.eventIdParam || 'eventId').trim() || 'eventId';
-    const defaultEventId = String(eventConfig.defaultEventId || 'irmanestalin2026').trim() || 'irmanestalin2026';
+    const defaultEventId = String(eventConfig.defaultEventId || 'tonylopez2026').trim() || 'tonylopez2026';
     const params = new URLSearchParams(window.location.search || '');
     const paramValue = String(params.get(eventIdParam) || '').trim();
     const eventId = paramValue || defaultEventId;
@@ -120,11 +120,11 @@ function createSiteConfig(remoteConfig) {
                 ...(remoteEvento.ceremonia || {})
             },
             recepcion: {
-                titulo: 'Celebración',
+                titulo: 'Recepción',
                 lugar: "Tony's Home",
-                hora: '7:30 PM',
+                hora: '4:00 PM',
                 direccion: '3029 Ambersweet Pl, Clermont, FL 34711, United States',
-                ubicacionUrl: 'https://maps.apple/p/Y9vPoC194GsG.D',
+                ubicacionUrl: 'https://maps.app.goo.gl/omoCm7fXArRfcXnv6',
                 ...(localEvento.recepcion || {}),
                 ...(remoteEvento.recepcion || {})
             }
@@ -286,47 +286,18 @@ function applyFooterConfig() {
 // ============================================
 const GuestConfig = {
     invitados: {
-        "1": { nombre: "Rosa Rosero", pases: 1, ninos: 0 },
-        "2": { nombre: "Adriana Acosta", pases: 1, ninos: 2 },
-        "3": { nombre: "Luis Balladares y Sra.", pases: 2, ninos: 0 },
-        "4": { nombre: "Felix Rosero y Familia", pases: 2, ninos: 1 },
-        "5": { nombre: "Miguel Nuñez y Familia", pases: 3, ninos: 0 },
-        "6": { nombre: "Ernesto Mendoza y Familia", pases: 4, ninos: 0 },
-        "7": { nombre: "Margoth Fiallos", pases: 1, ninos: 1 },
-        "8": { nombre: "Reinaldo Fiallos y Sra.", pases: 2, ninos: 0 },
-        "9": { nombre: "Marco Lopez y Familia", pases: 2, ninos: 1 },
-        "10": { nombre: "Mariana Fiallos", pases: 1, ninos: 0 },
-        "11": { nombre: "Vinicio Ortiz y Familia", pases: 2, ninos: 2 },
-        "12": { nombre: "Juan Acosta y Familia", pases: 2, ninos: 2 },
-        "13": { nombre: "Alex Acosta y Familia", pases: 2, ninos: 2 },
-        "14": { nombre: "Alex Dinopolus y Sra.", pases: 2, ninos: 0 },
-        "15": { nombre: "Dr. Reinoso y Sra.", pases: 2, ninos: 0 },
-        "16": { nombre: "Maura Flores", pases: 2, ninos: 0 },
-        "17": { nombre: "Candy Sifuentes", pases: 2, ninos: 0 },
-        "18": { nombre: "Pascual Hernandez", pases: 2, ninos: 0 },
-        "19": { nombre: "Arturo Coyotecatl", pases: 2, ninos: 0 },
-        "20": { nombre: "Ana Alvarez", pases: 1, ninos: 0 },
-        "21": { nombre: "Francisco Canastuj", pases: 1, ninos: 0 },
-        "22": { nombre: "Jose Soto", pases: 2, ninos: 0 },
-        "23": { nombre: "Alex Salazar", pases: 2, ninos: 0 },
-        "24": { nombre: "Danilo Jordan", pases: 2, ninos: 0 },
-        "25": { nombre: "Byron Ulloa y Sra.", pases: 2, ninos: 0 },
-        "26": { nombre: "Alfredo Fiallos", pases: 1, ninos: 0 },
-        "27": { nombre: "Edwin Fiallos", pases: 1, ninos: 0 },
-        "28": { nombre: "Jonathan Fiallos", pases: 1, ninos: 0 },
-        "29": { nombre: "Nelson Nuñez", pases: 2, ninos: 0 },
-        "30": { nombre: "Mario Nuñez", pases: 2, ninos: 0 },
-        "31": { nombre: "Guido Nuñez", pases: 2, ninos: 0 },
-        "32": { nombre: "Vinicio Galarza", pases: 2, ninos: 0 },
-        "33": { nombre: "Freddy Acosta y Sra.", pases: 2, ninos: 0 },
-        "34": { nombre: "Ben", pases: 1, ninos: 0 },
-        "35": { nombre: "Jeremy", pases: 3, ninos: 0 },
-        "36": { nombre: "Juan Ochoa y Sra.", pases: 2, ninos: 0 },
-        "37": { nombre: "Bolívar López", pases: 1, ninos: 0 },
-        "38": { nombre: "Armando Cocha", pases: 1, ninos: 0 },
-        "39": { nombre: "Miguel Farez", pases: 2, ninos: 0 }
+        "1": { nombre: "Kayla", pases: 1, ninos: 0 },
+        "2": { nombre: "Harrison", pases: 1, ninos: 0 },
+        "3": { nombre: "Bailee", pases: 1, ninos: 0 },
+        "4": { nombre: "Jaxson", pases: 1, ninos: 0 },
+        "5": { nombre: "Tommy", pases: 1, ninos: 0 },
+        "6": { nombre: "Riley", pases: 1, ninos: 0 },
+        "7": { nombre: "McKenna", pases: 1, ninos: 0 },
+        "8": { nombre: "Owen", pases: 1, ninos: 0 },
+        "9": { nombre: "Mikal", pases: 1, ninos: 0 },
+        "10": { nombre: "Kelly", pases: 1, ninos: 0 }
     },
-    invitadoDefault: { nombre: "Rosa Rosero", pases: 1, ninos: 0 },
+    invitadoDefault: { nombre: "Kayla", pases: 1, ninos: 0 },
     paramId: 'id'
 };
 
@@ -1213,7 +1184,7 @@ const translations = {
     itinerary_item_7: "Despedida",
     evento1_titulo: "Bendición del Negocio",
     evento1_lugar: "Tony's Home",
-    evento2_titulo: "Celebración",
+    evento2_titulo: "Recepción",
     event_note: "Por favor, estaciona al borde de la calle frente a la casa. Si se llena, estaciona en la casa club y llama a Tony al 646 462 0346 para que pase por ti.",
     recepcion_titulo: "Recepción",
     btn_location: "Ver ubicación",
@@ -1243,7 +1214,7 @@ const translations = {
     btn_wish_submit: "Enviar deseo",
     wishes_empty: "Aún no hay deseos. Sé el primero en dejarme uno.",
     rsvp_title: "Confirmar Asistencia",
-    rsvp_intro: "Nos encantaría contar contigo. Confirma tu asistencia y acompáñanos a celebrar los 27 años de Tony.",
+    rsvp_intro: "Será genial contar contigo en la celebración de Tony. Por favor, confirma antes del 9 de octubre.",
     rsvp_label_nombre: "Nombre del invitado",
     rsvp_label_asistencia: "Asistirás",
     rsvp_si: "Sí, con mucho gusto",
@@ -1293,7 +1264,7 @@ const translations = {
     itinerary_item_7: "Farewell",
     evento1_titulo: "Business Blessing",
     evento1_lugar: "Tony's Home",
-    evento2_titulo: "Celebration",
+    evento2_titulo: "Reception",
     event_note: "Please park along the curb in front of the house. If it fills up, park at the clubhouse and call Tony at 646 462 0346 for a pickup.",
     recepcion_titulo: "Reception",
     btn_location: "View location",
@@ -1323,7 +1294,7 @@ const translations = {
     btn_wish_submit: "Send",
     wishes_empty: "No wishes yet. Be the first to leave one.",
     rsvp_title: "RSVP",
-    rsvp_intro: "We would love to celebrate with you. Please RSVP and join us for Tony's 27th birthday.",
+    rsvp_intro: "It will be great to celebrate with you. Please reply by October 9th.",
     rsvp_label_nombre: "Guest name",
     rsvp_label_asistencia: "Will you be joining us?",
     rsvp_si: "Absolutely, I'll be there",
