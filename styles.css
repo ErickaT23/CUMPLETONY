@@ -4331,6 +4331,23 @@ body {
     background-position: center !important;
 }
 
+#wishes-section .rsvp-inner {
+    margin-top: 34px;
+}
+
+#wishes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+#wishes-section .wishes-inner,
+#wishes-section .rsvp-inner {
+    flex: 0 0 auto;
+    width: min(760px, 100%);
+}
+
 #album .album-title,
 #album .playlist-title,
 #wishes-section .wishes-title,
@@ -4341,6 +4358,10 @@ body {
     text-transform: uppercase;
     color: #C9A84C !important;
     -webkit-text-fill-color: #C9A84C !important;
+}
+
+#wishes-section .rsvp-title {
+    font-size: 25px !important;
 }
 
 #album .album-title > span,

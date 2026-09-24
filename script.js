@@ -815,7 +815,7 @@ function initRSVP() {
     const form = document.getElementById('rsvp-form');
     const successMessage = document.getElementById('rsvp-success');
     const finalMessage = document.getElementById('rsvp-final-message');
-    const introMessage = document.querySelector('#rsvp-section .rsvp-intro');
+    const introMessage = document.querySelector('.rsvp-inner .rsvp-intro');
     const submitBtn = document.getElementById('rsvp-submit');
     const responseYes = document.getElementById('rsvp-response-yes');
     const responseNo = document.getElementById('rsvp-response-no');
