@@ -88,6 +88,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: auto;
+    scroll-behavior: auto;
 }
 
 body {
@@ -95,6 +98,7 @@ body {
     background-image: none;
     color: var(--ink);
     font-family: var(--text);
+    touch-action: pan-y;
 }
 
 img {
