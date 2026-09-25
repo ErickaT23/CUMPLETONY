@@ -1,10 +1,14 @@
 :root {
-    --bg: #000000;
-    --paper: #000000;
-    --paper-strong: #000000;
+    --bg: #172219;
+    --black-green: #0D1510;
+    --paper: #203125;
+    --paper-strong: #29402d;
+    --forest: #1B3526;
+    --moss: #40552D;
+    --olive: #59663A;
     --rose: #B7C85A;
-    --rose-dark: #252b0d;
-    --rose-deep: #141804;
+    --rose-dark: #34451b;
+    --rose-deep: #202d16;
     --beige: #F5EDD6;
     --gold-1: #F5EDD6;
     --gold-2: #D8C98A;
@@ -41,7 +45,7 @@
 
 html,
 body {
-    background: #000000;
+    background: var(--bg);
 }
 
 body {
@@ -49,7 +53,7 @@ body {
     min-height: 100vh;
     font-family: var(--font-body);
     color: var(--ink);
-    background: #000000;
+    background: var(--bg);
 }
 
 .dashboard-shell {
@@ -78,7 +82,7 @@ body {
     padding: 2.1rem 2.3rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
-    background: #000000;
+    background: linear-gradient(135deg, var(--black-green), var(--forest));
     box-shadow: var(--shadow-card);
 }
 
@@ -144,9 +148,21 @@ body {
     padding: 1.05rem 1rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--line-soft);
-    background: #000000;
+    background: var(--paper-strong);
     box-shadow: var(--shadow-soft);
     transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.summary-card:nth-child(2) {
+    background: var(--forest);
+}
+
+.summary-card:nth-child(3) {
+    background: var(--moss);
+}
+
+.summary-card:nth-child(4) {
+    background: var(--black-green);
 }
 
 .summary-card::before {
@@ -167,7 +183,7 @@ body {
 }
 
 .summary-card-highlight {
-    background: #000000;
+    background: linear-gradient(135deg, var(--olive), var(--forest));
     border-color: rgba(200, 216, 232, 0.28);
 }
 
@@ -205,7 +221,7 @@ body {
     padding: 1.28rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--line);
-    background: #000000;
+    background: linear-gradient(160deg, var(--paper-strong), var(--black-green));
     box-shadow: var(--shadow-card);
 }
 
@@ -270,7 +286,7 @@ body {
     padding: 0.66rem 0.82rem;
     border-radius: 12px;
     border: 1px solid rgba(200, 216, 232, 0.24);
-    background: #000000;
+    background: var(--black-green);
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 0.92rem;
@@ -330,20 +346,20 @@ body {
 
 .table-clear-btn {
     padding: 0.56rem 0.92rem;
-    background: #000000;
+    background: var(--forest);
     color: #FFFFFF;
 }
 
 .table-export-btn {
     padding: 0.56rem 1rem;
     border-color: rgba(200, 216, 232, 0.68);
-    background: #000000;
+    background: var(--moss);
     color: #FFFFFF;
 }
 
 .filter-chip {
     padding: 0.45rem 0.74rem;
-    background: #000000;
+    background: var(--black-green);
     color: #FFFFFF;
 }
 
@@ -366,7 +382,7 @@ body {
 
 .filter-chip.is-active {
     border-color: rgba(200, 216, 232, 0.72);
-    background: #0a0a0a;
+    background: var(--rose-dark);
     color: #FFFFFF;
 }
 
@@ -381,7 +397,7 @@ body {
     overflow-x: auto;
     border-radius: var(--radius-md);
     border: 1px solid var(--line-soft);
-    background: #000000;
+    background: var(--paper);
     scrollbar-color: rgba(139, 175, 200, 0.5) rgba(255, 255, 255, 0.08);
 }
 
@@ -407,7 +423,7 @@ body {
     text-transform: uppercase;
     color: #FFFFFF;
     border-bottom: 1px solid rgba(200, 216, 232, 0.2);
-    background: #0a0a0a;
+    background: var(--paper-strong);
 }
 
 .confirmations-table tbody tr {
@@ -578,23 +594,23 @@ body {
 .mobile-empty-state {
     border-radius: 12px;
     border: 1px dashed rgba(200, 216, 232, 0.26);
-    background: #000000;
+    background: var(--paper-strong);
 }
 
 .confirmation-card {
     border-radius: var(--radius-sm);
     border: 1px solid var(--line-soft);
-    background: #000000;
+    background: var(--paper);
     box-shadow: var(--shadow-soft);
     padding: 0.95rem;
 }
 
 .confirmation-card--pendiente {
-    background: #707070;
+    background: var(--moss);
 }
 
 .confirmation-card--no {
-    background: #0D2840;
+    background: var(--black-green);
 }
 
 .confirmation-card + .confirmation-card {
@@ -640,18 +656,6 @@ body {
 .dashboard-shell * {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
-}
-
-.dashboard-header,
-.summary-card,
-.dashboard-table-panel,
-.table-wrapper,
-.mobile-empty-state,
-.table-search-input,
-.table-clear-btn,
-.table-export-btn,
-.filter-chip {
-    background-color: #000000 !important;
 }
 
 @media (max-width: 1120px) {
@@ -759,8 +763,50 @@ body {
 }
 
 @media (max-width: 560px) {
+    .dashboard-shell {
+        width: min(100% - 1rem, 420px);
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .dashboard-header {
+        padding: 1.35rem 1rem 1.45rem;
+        margin-bottom: 1.1rem;
+        border-radius: 18px;
+    }
+
+    .dashboard-kicker {
+        font-size: 0.62rem;
+    }
+
+    .dashboard-header h1 {
+        margin-top: 0.55rem;
+        font-size: clamp(2.55rem, 14vw, 3.5rem);
+    }
+
+    .dashboard-subtitle {
+        font-size: 0.72rem;
+    }
+
     .dashboard-summary {
         grid-template-columns: 1fr;
+        gap: 0.62rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .summary-card {
+        min-height: 92px;
+        padding: 0.86rem 0.9rem;
+        border-radius: 15px;
+    }
+
+    .summary-label {
+        font-size: 0.59rem;
+    }
+
+    .summary-value {
+        margin-top: 0.5rem;
+        font-size: 1.95rem;
     }
 
     .summary-card-highlight {
@@ -768,7 +814,34 @@ body {
     }
 
     .dashboard-table-panel {
-        padding: 0.78rem;
+        padding: 0.72rem;
+        border-radius: 18px;
+    }
+
+    .table-panel-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .table-panel-header p,
+    .dashboard-event-current {
+        font-size: 0.72rem;
+    }
+
+    .table-search-input {
+        min-height: 2.65rem;
+        font-size: 0.86rem;
+    }
+
+    .table-actions-row {
+        gap: 0.38rem;
+    }
+
+    .table-clear-btn,
+    .table-export-btn,
+    .filter-chip {
+        min-height: 2.45rem;
+        padding: 0.55rem 0.7rem;
+        font-size: 0.58rem;
     }
 
     .table-actions-row-top {
@@ -792,5 +865,6 @@ body {
 
     .confirmation-card {
         padding: 0.86rem;
+        border-radius: 15px;
     }
 }

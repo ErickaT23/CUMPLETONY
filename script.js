@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     await hydrateSiteConfigForEvent();
     applySiteConfig();
     await InvitadoApp.init();
+    applyTranslation(currentLang);
     MensajeFlota.init();
     MusicaPlayer.init();
     initPortada();
@@ -1155,7 +1156,7 @@ function initGiftModal() {
 // ============================================
 // SISTEMA DE TRADUCCIÓN
 // ============================================
-let currentLang = 'es';
+let currentLang = 'en';
 
 const translations = {
   es: {
@@ -1542,7 +1543,7 @@ function initLangToggle() {
   const fab = document.createElement('div');
   fab.className = 'lang-fab';
   fab.id = 'lang-fab';
-  fab.innerHTML = '<button id="lang-fab-btn" class="lang-fab-btn" type="button" aria-label="Switch language">ENG</button>';
+  fab.innerHTML = '<button id="lang-fab-btn" class="lang-fab-btn" type="button" aria-label="Cambiar idioma">ES</button>';
   document.body.appendChild(fab);
 
   document.getElementById('lang-fab-btn').addEventListener('click', function() {
