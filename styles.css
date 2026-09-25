@@ -2932,6 +2932,15 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
     }
 }
 
+/* Se conserva el hero en el HTML, pero no se muestra en la invitacion. */
+#hero-invitado,
+#separador-itinerario,
+#separador-regalos,
+#separador-wishes,
+#separador-rotativo {
+    display: none;
+}
+
 @media (min-width: 900px) {
     .agenda-section {
         background-attachment: fixed;
