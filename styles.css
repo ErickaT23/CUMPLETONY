@@ -2095,7 +2095,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
 }
 
 .wish-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: #6b722852;
     border: 1px solid var(--line);
     text-align: left;
     padding: 14px;
@@ -2104,7 +2104,7 @@ html.js-anim .section-separador.visible .separador-foto-img {
 .wish-card-name {
     margin: 0;
     font-family: var(--title);
-    color: var(--rose-dark);
+    color: var(--ink);
 }
 
 .wish-card-message {
