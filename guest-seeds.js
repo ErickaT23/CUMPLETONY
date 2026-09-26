@@ -49,7 +49,7 @@
         "47": { nombre: "Nicole", pases: 1, ninos: 0 },
         "48": { nombre: "Leysha", pases: 1, ninos: 0 },
         "49": { nombre: "Gustavo", pases: 1, ninos: 0 },
-        "50": { nombre: "Rebeca", pases: 1, ninos: 0 },
+        "50": { nombre: "Rebecca", pases: 1, ninos: 0 },
         "51": { nombre: "Tatiana Morales", pases: 1, ninos: 0 },
         "52": { nombre: "Lori Maslowski", pases: 1, ninos: 0 },
         "53": { nombre: "Sara Frazier", pases: 1, ninos: 0 },
