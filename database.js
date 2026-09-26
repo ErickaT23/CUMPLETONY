@@ -1543,11 +1543,15 @@ function formatDate(timestamp) {
   if (!timestamp) return "";
   const date = new Date(timestamp);
   if (Number.isNaN(date.getTime())) return "";
-  const month = date.toLocaleDateString("es-GT", { month: "long" });
-  const formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${formattedMonth} ${day}, ${date.getFullYear()}`;
+  const locale = document.documentElement.lang === "es" ? "es-GT" : "en-US";
+  return date.toLocaleDateString(locale, {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  });
 }
+
+let latestWishes = [];
 
 function renderWishes(data) {
   const { wishesContainer } = getUI();
@@ -1556,6 +1560,11 @@ function renderWishes(data) {
   const wishes = Array.isArray(data)
     ? data
     : Object.values(data || {});
+  latestWishes = wishes;
+
+  window.refreshWishesLanguage = function () {
+    renderWishes(latestWishes);
+  };
 
   if (!wishes || wishes.length === 0) {
     wishesContainer.innerHTML = '<p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarme uno.</p>';

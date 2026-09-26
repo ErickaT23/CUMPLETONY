@@ -1546,6 +1546,9 @@ function applyTranslation(lang) {
   if (langBtn) langBtn.textContent = lang === 'es' ? 'ENG' : 'ES';
 
   document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+  if (typeof window.refreshWishesLanguage === 'function') {
+    window.refreshWishesLanguage();
+  }
 }
 
 function initLangToggle() {
