@@ -323,7 +323,11 @@ const InvitadoApp = {
         const params = new URLSearchParams(window.location.search);
         const rawId = String(params.get(GuestConfig.paramId) || '').trim();
         const safeId = rawId || 'default';
-        const invitado = GuestConfig.invitados[rawId];
+        const eventId = String(window.currentEventId || '').trim();
+        const seededGuests = typeof window.getLocalGuestDirectoryForEvent === 'function'
+            ? window.getLocalGuestDirectoryForEvent(eventId)
+            : {};
+        const invitado = GuestConfig.invitados[rawId] || seededGuests[rawId];
 
         if (invitado) {
             return {
@@ -352,7 +356,12 @@ const InvitadoApp = {
             const eventId = String(window.currentEventId || '').trim();
             const remoteGuest = await rsvpDB.getInvitadoById(eventId, guestId);
             if (!remoteGuest || typeof remoteGuest !== 'object') return null;
-            const localGuest = GuestConfig.invitados[String(guestId || '').trim()] || {};
+        const localGuestId = String(guestId || '').trim();
+        const localGuest = GuestConfig.invitados[localGuestId]
+            || (typeof window.getLocalGuestDirectoryForEvent === 'function'
+                ? window.getLocalGuestDirectoryForEvent(eventId)[localGuestId]
+                : {})
+            || {};
 
             return {
                 id: String(remoteGuest.id || guestId || 'default'),
