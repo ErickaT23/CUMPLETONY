@@ -3150,6 +3150,18 @@ html.js-anim .section.visible :is(.event-icon, .playlist-icon, .media-share-icon
     object-position: center;
 }
 
+#separador-f1,
+#separador-f1 .separador-foto-img {
+    min-height: clamp(500px, 75vh, 850px);
+    height: clamp(500px, 75vh, 850px);
+}
+
+#separador-fs2,
+#separador-fs2 .separador-foto-img {
+    min-height: clamp(500px, 75vh, 850px);
+    height: clamp(500px, 75vh, 850px);
+}
+
 #invitado,
 #bendiciones,
 #events,
